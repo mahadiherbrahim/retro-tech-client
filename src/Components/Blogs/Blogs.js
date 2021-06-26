@@ -7,7 +7,7 @@ const Blogs = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://limitless-springs-68209.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => setPosts(data))
     }, []);

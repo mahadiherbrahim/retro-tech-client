@@ -8,7 +8,7 @@ const SingleBlog = () => {
     const { id } = useParams();
     const [blogDetails, setBlogDetails] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/singleBlog/${id}`)
+        fetch(`https://limitless-springs-68209.herokuapp.com/singleBlog/${id}`)
             .then(res => res.json())
             .then(data => setBlogDetails(data[0]));
     }, [])

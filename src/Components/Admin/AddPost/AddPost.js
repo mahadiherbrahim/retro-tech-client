@@ -9,7 +9,7 @@ const AddPost = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const [imageURL,setImageURL] = useState('')
+    const [imageURL, setImageURL] = useState('')
 
     const history = useHistory()
 
@@ -17,37 +17,37 @@ const AddPost = () => {
         const postData = {
             title: data.title,
             description: data.description,
-            imageURL : imageURL,
+            imageURL: imageURL,
         }
 
         console.log(postData);
 
-        const url = `http://localhost:5000/addBlog`;
-        fetch(url,{
+        const url = `https://limitless-springs-68209.herokuapp.com/addBlog`;
+        fetch(url, {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(postData),
         })
-        .then(res => {
-            console.log(res)
-            alert('Your Blog Published')
-        })
+            .then(res => {
+                console.log(res)
+                alert('Your Blog Published')
+            })
     };
 
     const handleImageUpload = event => {
         console.log(event.target.files[0])
         const imageData = new FormData();
-        imageData.set('key','410b5fd5e1b122c413f230644ed7ca8f');
-        imageData.append('image',event.target.files[0])
+        imageData.set('key', '410b5fd5e1b122c413f230644ed7ca8f');
+        imageData.append('image', event.target.files[0])
         axios.post('https://api.imgbb.com/1/upload', imageData)
-        .then(function (response) {
-            setImageURL(response.data.data.display_url);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+            .then(function (response) {
+                setImageURL(response.data.data.display_url);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 
     return (
@@ -62,12 +62,12 @@ const AddPost = () => {
                         <div className="col-md-3"></div>
                         <div className="col-md-6">
                             <form onSubmit={handleSubmit(onSubmit)}>
-                                    <input  {...register("title")} className="form-control" placeholder="Blog Title"/><br/>
-                                    <textarea {...register("description")} className="form-control"  placeholder="Blog Description" /><br/>
-                                    <input type="file" onChange={handleImageUpload} className="form-control" /><br/>
-                                    <input type="submit" value="Add Blog" className="btn btn-info"/>
+                                <input  {...register("title")} className="form-control" placeholder="Blog Title" /><br />
+                                <textarea {...register("description")} className="form-control" placeholder="Blog Description" /><br />
+                                <input type="file" onChange={handleImageUpload} className="form-control" /><br />
+                                <input type="submit" value="Add Blog" className="btn btn-info" />
                             </form>
-                            
+
                         </div>
                         <div className="col-md-3"></div>
                     </div>

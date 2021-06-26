@@ -4,23 +4,23 @@ import { useState } from 'react';
 import AdminNav from '../AdminNav/AdminNav';
 
 const ManageBlog = () => {
-    const [blogs,setBlogs] = useState([])
+    const [blogs, setBlogs] = useState([])
 
-    useEffect(()=>{
-        fetch('http://localhost:5000/blogs')
-        .then(res => res.json())
-        .then(data => setBlogs(data))
-    },[])
+    useEffect(() => {
+        fetch('https://limitless-springs-68209.herokuapp.com/blogs')
+            .then(res => res.json())
+            .then(data => setBlogs(data))
+    }, [])
 
 
     const deleteProduct = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`,{
-            method:'DELETE'
+        fetch(`https://limitless-springs-68209.herokuapp.com/delete/${id}`, {
+            method: 'DELETE'
         })
-        .then(res => res.json())
-        .then(result => {
-            console.log(result);
-        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
     }
 
     return (
@@ -41,12 +41,12 @@ const ManageBlog = () => {
                         </thead>
                         <tbody>
                             {
-                                blogs.map(blog => 
-                                <tr>
-                                    <th scope="row">{blog.title}</th>
-                                    <td><img src={blog.imageURL} class="w-50" alt="..." /></td>
-                                    <td><button className="btn btn-danger" onClick={ () => deleteProduct(`${blog._id}`)}>Delete</button> </td>
-                                </tr>)
+                                blogs.map(blog =>
+                                    <tr>
+                                        <th scope="row">{blog.title}</th>
+                                        <td><img src={blog.imageURL} class="w-50" alt="..." /></td>
+                                        <td><button className="btn btn-danger" onClick={() => deleteProduct(`${blog._id}`)}>Delete</button> </td>
+                                    </tr>)
                             }
                         </tbody>
                     </table>
