@@ -25,10 +25,10 @@ const ManageBlog = () => {
 
     return (
         <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-3 col-sm-12">
                 <AdminNav></AdminNav>
             </div>
-            <div className="col-md-9">
+            <div className="col-md-9 col-sm-12">
                 <div className="container">
                     <h2 className="text-center p-5">Manage My Blogs</h2>
                     <table className="table">

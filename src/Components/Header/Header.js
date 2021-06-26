@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../retro-tech.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
 import './Header.css'
 const Header = () => {
     return (
@@ -10,7 +14,7 @@ const Header = () => {
                     <Link className="navbar-brand" to="/"><img className="logo" src={logo} alt="" /></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <i className="fa fa-navicon"></i>
+                        <FontAwesomeIcon icon={faBars} />
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ms-auto">

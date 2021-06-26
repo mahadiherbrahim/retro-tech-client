@@ -16,7 +16,8 @@ const SingleBlog = () => {
     return (
         <div className="row single-blog">
             <Header></Header>
-            <div className="col-md-6 offset-3 text-center">
+            <div className="col-md-3"></div>
+            <div className="col-md-6  text-center col-sm-12 col-xm-12">
                 <img className="p-2" src={blogDetails.imageURL} />
                 <h1 className="p-2">{blogDetails.title}</h1>
                 <p>{blogDetails.description}</p>
