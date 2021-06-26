@@ -35,7 +35,6 @@ const ManageBlog = () => {
                         <thead className="thead-light">
                             <tr>
                                 <th scope="col">Blog Title</th>
-                                <th scope="col">Blog Image</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -44,7 +43,6 @@ const ManageBlog = () => {
                                 blogs.map(blog =>
                                     <tr>
                                         <th scope="row">{blog.title}</th>
-                                        <td><img src={blog.imageURL} class="w-50" alt="..." /></td>
                                         <td><button className="btn btn-danger" onClick={() => deleteProduct(`${blog._id}`)}>Delete</button> </td>
                                     </tr>)
                             }
