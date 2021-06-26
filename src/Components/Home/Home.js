@@ -1,12 +1,14 @@
 import React from 'react';
 import Blogs from '../Blogs/Blogs';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
+import './Home.css'
 const Home = () => {
     return (
-        <div>
+        <div className="front-page">
             <Header></Header>
-            <h1>Hello World</h1>
             <Blogs></Blogs>
+            <Footer></Footer>
         </div>
     );
 };

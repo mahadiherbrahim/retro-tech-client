@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+p {
+    font-size: 18px;
+}
+
+button:focus {
+    border: none;
+}
+
+/* Header style */
+
+.navbar .logo {
+    width: 180px;
+}
+
+.fuel-nav .navbar-toggler {
+    border: none;
+}
+
+.fuel-nav .navbar-toggler i {
+    font-size: 28px;
+    color: White;
+}
+
+.fuel-nav .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.fuel-nav .navbar-nav .nav-item .nav-link {
+    color: White;
+}
+
+.fuel-nav .navbar-nav .nav-item .nav-link:hover {
+    color: lightgray;
+    border-bottom: 1px solid White;
+}
+
+.fuel-nav .navbar-nav .nav-item .active {
+    color: lightgray;
+    border-bottom: 1px solid White;
+}
+
+.nav-sign-up {
+    border: 2px solid White;
+    color: White;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 4px 25px 4px 25px;
+    transition: 0.8s;
+    text-decoration: none;
+}
+
+.nav-sign-up:hover {
+    color: #f04326;
+    background-color: White;
+}
+
+.navbar-nav a {
+    color: White;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 30px;
+}
+
+.nav-login, .nav-logout {
+    border: 2px solid White;
+}
+
+/* End Navbar Search  Style */
+
+/* Responsive Style */
+
+@media (max-width: 480px) {
+    #navbarNav {
+        text-align: right;
+    }
+    .fuel-nav .navbar-nav .nav-item .nav-link:hover {
+        border-bottom: 0px;
+    }
+    .fuel-nav .navbar-nav .nav-item .active {
+        border-bottom: 0px;
+    }
+    .registration {
+        margin-top: 20px;
+    }
+}
+
+@media(min-width: 481px) and (max-width: 768px) {
+    #navbarNav {
+        text-align: right;
+    }
+    .fuel-nav .navbar-nav .nav-item .nav-link:hover {
+        border-bottom: 0px;
+    }
+    .fuel-nav .navbar-nav .nav-item .active {
+        border-bottom: 0px;
+    }
+    .registration {
+        margin-top: 20px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 993px) {
+    #navbarNav {
+        text-align: right;
+    }
+    .fuel-nav .navbar-nav .nav-item .nav-link:hover {
+        border-bottom: 0px;
+    }
+    .fuel-nav .navbar-nav .nav-item .active {
+        border-bottom: 0px;
+    }
+}
